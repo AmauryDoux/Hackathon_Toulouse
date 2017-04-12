@@ -14,7 +14,7 @@
 
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,20 +24,22 @@
 </head>
 
 <body>
+  <div class="container-fluid">
     <!--  /////////////////////////////////////////////////////////////////////
    /////////////////////////      HEADER : Thomas       /////////////////////////////
    ///////////////////////////////////////////////////////////////////// -->
-    <section id="header">
+    <section id="header" class="row">
         <!--  //// BURGER MENU : Julien  //// -->
-        <h1>#Hackathon OPEN DATA à Toulouse</h1>
-        <div id="countDown">COMPTE A REBOURS</div>
-        <h3>8-9 juin 2017, Quai des Savoirs</h3>
+
+        <h1 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">#Hackathon OPEN DATA à Toulouse</h1>
+        <div id="countDown" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">COMPTE A REBOURS</div>
+        <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">8-9 juin 2017, Quai des Savoirs</h3>
 
     </section>
     <!--  /////////////////////////////////////////////////////////////////////
    /////////////////////////      INTRO : Thomas       /////////////////////////////
    ///////////////////////////////////////////////////////////////////// -->
-    <section id="intro">
+    <section id="intro" class="row">
         <h2>“La Wild Code School Toulouse en partenariat avec Toulouse Métropole
 lance un Hackathon inédit sur l’Open Data et la Smart City. </h2>
         <p>
@@ -50,13 +52,13 @@ lance un Hackathon inédit sur l’Open Data et la Smart City. </h2>
  /////////////////////////      ENJEUX : Thomas      /////////////////////////////
  ///////////////////////////////////////////////////////////////////// -->
 
-    <section id="enjeux">
-        <figure classe="leftFig">
-            <img src="http://lorempixel.com/640/480/business/" alt="">
-        </figure>
-        <article class="rightArt">
-            <h2>Enjeux OPEN DATA</h2>
-            <p>Toulouse Métropole et la Wild Code School Toulouse se mobilisent pour penser et bâtir la ville intelligente de demain. Dans le cadre de cet Hackathon, plusieurs défis seront proposés aux différentes équipes qui auront pour objectif de proposer
+    <section id="enjeux" class="row">
+
+            <img class="leftFig img-responsive col-lg-6 col-md-6 col-sm-12 col-xs-12" src="http://lorempixel.com/840/680/business/" alt="">
+
+        <article class="rightArt col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h2 class="text-right">Enjeux OPEN DATA</h2>
+            <p class="text-left">Toulouse Métropole et la Wild Code School Toulouse se mobilisent pour penser et bâtir la ville intelligente de demain. Dans le cadre de cet Hackathon, plusieurs défis seront proposés aux différentes équipes qui auront pour objectif de proposer
                 des services innovants sur l’une des thématiques prioritaires de Toulouse Métropole pour imaginer une ville : 1/ adaptable, efficiente et respirable 3/ internationale et ancrée dans ses racines 4/ du bien-vivre encore plus chaleureuse
                 et intergénérationnelle 5/ plus belle, propre et sûre 5/ où la mobilité est plus simple et fluide Les équipes projets mobilisés auront pour principale contrainte technique d’utiliser le portail des données ouvertes du territoire de Toulouse
                 Métropole : https://data.toulouse-metropole.fr/page/home/</p>
@@ -115,6 +117,8 @@ lance un Hackathon inédit sur l’Open Data et la Smart City. </h2>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+</div><!-- !Container-fluid -->
+
 </body>
 
 </html>
