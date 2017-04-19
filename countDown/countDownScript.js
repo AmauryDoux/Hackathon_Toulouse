@@ -7,31 +7,31 @@ var elementd = document.getElementById('d');
 
 var seconds = new ProgressBar.Circle(elements, {
     duration: 200,
-    color: "#000000",
-    trailColor: "#ddd",
-    strokeWidth: 2,
-    trailWidth: 1
+    color: "#ffffff",
+    trailColor: "#ff0099",
+    strokeWidth: 4,
+    trailWidth: 4
 });
 var minutes = new ProgressBar.Circle(elementm, {
     duration: 200,
-    color: "#000000",
-    trailColor: "#ddd",
-    strokeWidth: 2,
-    trailWidth: 1
+    color: "#ffffff",
+    trailColor: "#ff0099",
+    strokeWidth: 4,
+    trailWidth: 4
 });
 var hours = new ProgressBar.Circle(elementh, {
     duration: 200,
-    color: "#000000",
-    trailColor: "#ddd",
-    strokeWidth: 2,
-    trailWidth: 1
+    color: "#ffffff",
+    trailColor: "#ff0099",
+    strokeWidth: 4,
+    trailWidth: 4
 });
 var days = new ProgressBar.Circle(elementd, {
     duration: 200,
-    color: "#000000",
-    trailColor: "#ddd",
-    strokeWidth: 2,
-    trailWidth: 1
+    color: "#ffffff",
+    trailColor: "#ff0099",
+    strokeWidth: 4,
+    trailWidth: 4
 });
 
 shortcode_date = '2017-06-11T11:00:00'
