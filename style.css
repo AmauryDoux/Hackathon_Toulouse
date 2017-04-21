@@ -1,12 +1,17 @@
-body {
+html, body {
     font-family: 'Raleway', sans-serif;
+    max-width: 100vw;
+}
+
+.container-fluid {
+    padding: 0;
+    max-width: 100vw;
 }
 
 
 /* HEADER */
 
-h2,
-p {
+h2, p {
     color: #ffffff;
 }
 
@@ -16,40 +21,225 @@ h2 {
 }
 
 #header {
-    height: 95vh;
-    background: #a9378e;
-    color: #ff0099;
-    padding-top: 4em;
+    height:670px;
+    background:#EC407A;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    border-bottom:4px solid white;
+    
 }
 
-h1,
-#header h3,
-#countDown {
+h1, #header h3, #countDown {
     text-align: center;
     display: block;
 }
 
 h1 {
-    margin-bottom: 3em;
+   
     font-size: 5em;
     /*-webkit-text-stroke-width: 0.5px;
 -webkit-text-stroke-color: #fff;*/
 }
 
-#header h3 {
-    margin-top: 8em;
+#header h3{
+    margin-bottom: 100px;
+letter-spacing: 2px;
+    font-size: 3em;
+    
 }
+/*
+Burger CSS *******************
+*/
+
+
+li,
+a {
+    margin: 114px 0 -55px 0;
+    color: white;
+    font: 40pt "Roboto", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    outline: 0;
+    display: none;
+   
+    
+}
+
+li {
+    width: 507px;
+    margin: auto;
+    text-indent: 5px;
+    text-align: center;
+}
+
+a:hover {
+    display: block;
+    transform: scale(1.1);
+    transition: all .1s;
+    text-decoration: none;
+    text-transform: none;
+    color:white;
+   
+}
+a:link,a:visited {
+   text-decoration: none !important;
+    color:white; 
+    
+}
+
+a:activ,{
+    animation: back, 1s, both ; 
+}
+
+@keyframes back {
+    0%{
+        width: 100%;
+        height: 100%;
+    }
+    100%{
+        width: 0%;
+        height: 100%;
+    }
+
+}
+
+#trigger,
+#burger,
+#burger:before,
+#burger:after {
+    position: fixed;
+    margin-top:20px;
+    margin-left:20px;
+    background: white;
+    width: 30px;
+    height: 5px;
+    transition: .1s ease;
+    cursor: pointer;
+    z-index: 111111111111;
+}
+
+#trigger {
+    height: 5px;
+    background: none;
+    
+
+}
+
+#burger:before {
+    content: " ";
+    top: 10px;
+    left: 0;
+}
+
+#burger:after {
+    content: " ";
+    top: 20px;
+    left: 0;
+}
+/*fleche*/
+#menu-toggle:checked+#trigger+#burger{
+    top: 20px;
+    transform: rotate(180deg);
+    transition: transform .1s ease;
+}
+/* fleche bas*/
+#menu-toggle:checked+#trigger+#burger:before {
+    width: 20px;
+    top:-2px;
+    left: 18px;
+    margin:0px;
+    transform: rotate(45deg) translateX(-5px);
+    transition: transform .1s ease;
+}
+
+/* fleche haut*/
+#menu-toggle:checked+#trigger+#burger:after {   
+    
+    width: 20px;
+    top: -4px;
+    left: 23px;
+    margin:0px;
+    transform: rotate(-46deg) translateX(-15px);
+    transition: transform .1s ease;
+}
+
+
+#menu {
+    position: fixed;
+    height: 105%;
+    width: 105%;
+    z-index: 11000;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-90deg, #EC407A, #7E57C2);
+    animation: not-checked-anim .1s both;
+    transition: .1s;
+}
+
+
+ /* OUVERTURE DU MENU*/
+#menu-toggle:checked+#trigger+#burger+#menu { 
+    animation: checked-anim 1s ;
+}
+
+#menu-toggle:checked+#trigger~#menu>li,
+a {
+    display:block;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    display:none;
+   
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+
+@keyframes checked-anim {
+    0% {
+        width: 0%;
+        height: 100%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@keyframes not-checked-anim {
+    0% {
+        width: 100%;
+        height: 100%;
+    }
+    100% {
+        width: 0;
+        height: 100%;
+    }
+}
+
+
+
+
 
 
 /*
 COUNTDOWN CSS *******************
 */
 
+
 #countup {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-family: "robotop", Helvetica, Arial, sans-serif;
+    
 }
 
 #countup span.number {
@@ -59,6 +249,8 @@ COUNTDOWN CSS *******************
     font-size: 70px;
     line-height: 75px;
     text-align: center;
+    color: white;
+    
 }
 
 #countup span.label {
@@ -70,8 +262,8 @@ COUNTDOWN CSS *******************
 #countup .part {
     display: inline-block;
     text-align: center;
-    width: 22%;
-    padding: 1%;
+    width: 20%;
+    padding: 1%; 
 }
 
 @media only screen and (max-width: 1200px) {
@@ -132,15 +324,17 @@ END COUNTDOWN CSS *******************
     z-index: 1;
     left: 50%;
     top: 70%;
+    margin-top:55px;
     margin-left: -5em;
-    /*background: #111;*/
+    background: linear-gradient(-90deg, #EC407A, #7E57C2);;
     width: 10em;
     height: 10em;
     padding: 4em 3.5em;
     border-radius: 50%;
     font-size: 0.5em;
     display: block;
-    box-shadow: 0px 0px 5px 0px #333;
+    border:4px solid white
+    
 }
 
 .arrow {
@@ -156,6 +350,9 @@ END COUNTDOWN CSS *******************
 
 .arrow i {
     color: #ffffff;
+    margin-top: -20px;
+    margin-left:-9px;
+    font-size:50px;
 }
 
 .arrow:after {
@@ -247,8 +444,7 @@ END COUNTDOWN CSS *******************
     background: #ff0099;
 }
 
-#intro h2,
-#intro p {
+#intro h2, #intro p {
     text-align: center;
     width: 80vw;
     left: 10vw;
@@ -292,6 +488,19 @@ END COUNTDOWN CSS *******************
 
 #enjeux p {
     margin-top: 4em;
+}
+
+<<<<<<< HEAD #twitter {
+    height: 65vh;
+}
+
+#twitter a {
+    text-align: center;
+}
+
+#map {
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -384,6 +593,11 @@ END COUNTDOWN CSS *******************
 #partners p {
     text-align: center;
     margin-top: 4em;
+}
+/* TWITTER */
+.timeline{
+  max-height: 80vh;
+  overflow: scroll;
 }
 
 /* MAPS */
