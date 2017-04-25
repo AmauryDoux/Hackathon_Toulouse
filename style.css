@@ -483,7 +483,7 @@ END COUNTDOWN CSS *******************
     margin-top: 4em;
 }
 
-<<<<<<< HEAD #twitter {
+#twitter {
     height: 65vh;
 }
 
@@ -500,7 +500,7 @@ END COUNTDOWN CSS *******************
 /* PROGRAMME */
 
 #programme {
-    background: #a9378e;
+    background: #ff0099;
 }
 
 .rightFig {
@@ -600,6 +600,29 @@ END COUNTDOWN CSS *******************
     margin-top: 4em;
 }
 
+/* PRESS */
+
+#press {
+    text-align: center;
+    height: 40vh;
+    background: #ff0099;
+}
+
+.leftArt p {
+    font-size: 14px;
+}
+
+#press .leftArt {
+    padding: 4em;
+    max-height: 10em;
+}
+
+.upcase {
+    text-transform: uppercase;
+    text-decoration-style: double;
+    font-weight: bold;
+    font-size: 16px;
+}
 
 /* TWITTER */
 
