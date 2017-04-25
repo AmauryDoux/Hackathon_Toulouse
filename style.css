@@ -56,7 +56,7 @@ h1 {
 Burger CSS *******************
 */
 
-li, a {
+#menu li, #menu a {
     margin: 114px 0 -55px 0;
     color: white;
     font: 40pt "Roboto", sans-serif;
@@ -416,7 +416,6 @@ END COUNTDOWN CSS *******************
 .row {
     position: relative;
     margin-right: 0;
-
 }
 
 .container-fluid {
@@ -594,6 +593,7 @@ END COUNTDOWN CSS *******************
     margin-top: 4em;
 }
 
+
 /* PRESS */
 
 #press {
@@ -618,6 +618,7 @@ END COUNTDOWN CSS *******************
     font-size: 16px;
 }
 
+
 /* TWITTER */
 
 .timeline {
@@ -630,4 +631,22 @@ END COUNTDOWN CSS *******************
 
 .map {
     position: relative;
+}
+/* FOOTER */
+footer {
+    height: 10vh;
+    background: #a9378e;
+    padding-top: 2em !important;
+}
+
+footer .row a {
+    font-size: 1em;
+}
+
+.fa-twitter:hover {
+  color: #1DA1F2;
+}
+
+.fa-facebook:hover {
+  color: #3B5998;
 }
