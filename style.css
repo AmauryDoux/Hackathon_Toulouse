@@ -52,169 +52,236 @@ h1 {
 }
 
 
+
+
+
+
 /*
 Burger CSS *******************
 */
 
-#menu li, #menu a {
-    margin: 114px 0 -55px 0;
-    color: white;
-    font: 40pt "Roboto", sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: none;
-    list-style: none;
-    outline: 0;
-    display: none;
+/* Hamburger and Cross clickable */
+
+#menu {
+    width: 54px;
+    height: 54px;
+    margin: 20px 0 0 20px;
+    top: 0;
+    background: linear-gradient(-90deg, #EC407A, #7E57C2);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 3;
+    cursor: pointer;
+    position: fixed;
+    
 }
 
+
+/* Barre du Milieu*/
+
+#span {
+    width: 22px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    position: absolute;
+    display: block;
+}
+
+
+/* Barre du Haut */
+
+#span:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    transform: translateY(-6px);
+    transition: transform 0.5s;
+}
+
+
+/* Barre du Bas */
+
+#span:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    transform: translateY(6px);
+    transition: transform 0.5s;
+}
+
+
+/*Barre du Haut au survol de la souris*/
+
+#menu:hover #span:before {
+    transform: translateY(-8px);
+}
+
+
+/* Barre du Bas au survorl de la souris*/
+
+#menu:hover #span:after {
+    transform: translateY(8px);
+}
+
+
+/* Premier test SVG by jQtip thanks to "Grafikart"*/
+
+svg {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: white;
+    stroke-dasharray: 170;
+    stroke-dashoffset: 170;
+    transition: stroke-dashoffset 0.5s;
+}
+
+
+/* MAKE A CROSS */
+
+
+/*Au click du menu avec Jquery */
+
+#menu.is-opened {
+    transition: transform 0.2s;
+    transform: rotate(180deg);
+}
+
+/* Animation SVG au clik */
+
+#menu.is-opened svg {
+    transform: rotate(-180deg);
+    stroke-dashoffset: 0;
+}
+
+
+/* Barre du Milieu au click avec Jquery*/
+
+#menu.is-opened #span {
+    background: transparent;
+    transition: background 0.5s;
+}
+
+
+/*Barre du Haut au click avec Jquery */
+
+#menu.is-opened #span:before {
+    transform: translateY(0) rotate(45deg);
+    transform-origin: 50% 50%;
+}
+
+
+/*Barre du Bas au click avec Jquery */
+
+#menu.is-opened #span:after {
+    transform: translateY(0) rotate(-45deg);
+    transform-origin: 50% 50%;
+}
+
+
+/* MAKE A CROSS */
+
+
+/* Element à ouvrir et à fermer*/
+
+#openMenu {
+    position:fixed;
+    width: 0%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    overflow: hidden;
+    background: linear-gradient(-90deg, #EC407A, #7E57C2);
+    z-index: 2;
+}
+
+#openMenu.is-opened{
+    animation: slideUp 1s both;
+}
+#openMenu.is-closed, .link.is-closed{
+    animation: slideDown 1s both;
+}
+
+@keyframes slideUp{
+    0%{
+        width:0%;
+        height:100%;
+    }
+    100%{
+        width:100%;
+        height:100%;
+    }
+    
+}
+
+@keyframes slideDown{
+    0%{
+        width:100%;
+        height:100%;
+    }
+    100%{
+        width:0%;
+        height:100%;
+    }
+    
+    
+}
+
+
+
+/* texte à afficher */
+
 li {
-    width: 507px;
+    width: 100%;
     margin: auto;
+    font-weight: 700;
     text-indent: 5px;
     text-align: center;
 }
 
-a:hover {
-    display: block;
-    transform: scale(1.1);
-    transition: all .1s;
-    text-decoration: none;
-    text-transform: none;
-    color: white;
-}
 
-a:link, a:visited {
+/* liens cliquables pour acceder aux chapitres */
+
+.link {
+    color: white;
     text-decoration: none !important;
+}
+
+.link:hover{
     color: white;
-}
-
-a:activ, {
-    animation: back, 1s, both;
-}
-
-@keyframes back {
-    0% {
-        width: 100%;
-        height: 100%;
-    }
-    100% {
-        width: 0%;
-        height: 100%;
-    }
-}
-
-#trigger, #burger, #burger:before, #burger:after {
-    position: fixed;
-    margin-top: 20px;
-    margin-left: 20px;
-    background: white;
-    width: 30px;
-    height: 5px;
-    transition: .1s ease;
-    cursor: pointer;
-    z-index: 111111111111;
-}
-
-#trigger {
-    height: 5px;
-    background: none;
-}
-
-#burger:before {
-    content: " ";
-    top: 10px;
-    left: 0;
-}
-
-#burger:after {
-    content: " ";
-    top: 20px;
-    left: 0;
-}
-
-
-/*fleche*/
-
-#menu-toggle:checked+#trigger+#burger {
-    top: 20px;
-    transform: rotate(180deg);
-    transition: transform .1s ease;
-}
-
-
-/* fleche bas*/
-
-#menu-toggle:checked+#trigger+#burger:before {
-    width: 20px;
-    top: -2px;
-    left: 18px;
-    margin: 0px;
-    transform: rotate(45deg) translateX(-5px);
-    transition: transform .1s ease;
-}
-
-
-/* fleche haut*/
-
-#menu-toggle:checked+#trigger+#burger:after {
-    width: 20px;
-    top: -4px;
-    left: 23px;
-    margin: 0px;
-    transform: rotate(-46deg) translateX(-15px);
-    transition: transform .1s ease;
-}
-
-#menu {
-    position: fixed;
-    height: 105%;
-    width: 105%;
-    z-index: 11000;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(-90deg, #EC407A, #7E57C2);
-    animation: not-checked-anim .1s both;
-    transition: .1s;
-}
-
-
-/* OUVERTURE DU MENU*/
-
-#menu-toggle:checked+#trigger+#burger+#menu {
-    animation: checked-anim 1s;
-}
-
-#menu-toggle:checked+#trigger~#menu>li, a {
     display: block;
+    transform:scale(1.7);
+    transition: all .1s;
+    font-weight: bold;
 }
 
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-    display: none;
+.link:visited {
+    color: white !important;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
-@keyframes checked-anim {
-    0% {
-        width: 0%;
-        height: 100%;
-    }
-    100% {
-        width: 100%;
-        height: 100%;
-    }
+
+/* position et style du texte menu*/
+
+#textMenu {
+    position: relative;
+    margin: 110px auto;
+    font-size:250%;
+    padding: 10px;
+    line-height: 3;
+    
 }
 
-@keyframes not-checked-anim {
-    0% {
-        width: 100%;
-        height: 100%;
-    }
-    100% {
-        width: 0;
-        height: 100%;
-    }
-}
 
 
 /*
@@ -305,11 +372,10 @@ END COUNTDOWN CSS *******************
 /* Arrow */
 
 .arrow-wrap {
-    position: absolute;
+    position:absolute;
     z-index: 1;
     left: 50%;
     top: 70%;
-    margin-top: 55px;
     margin-left: -5em;
     background: linear-gradient(-90deg, #EC407A, #7E57C2);
     ;
@@ -598,8 +664,9 @@ END COUNTDOWN CSS *******************
 
 #press {
     text-align: center;
-    height: 40vh;
+    height: 65vh;
     background: #ff0099;
+    
 }
 
 .leftArt p {
@@ -619,19 +686,15 @@ END COUNTDOWN CSS *******************
 }
 
 
-/* TWITTER */
-
-.timeline {
-    max-height: 80vh;
-    overflow: scroll;
-}
-
-
 /* MAPS */
 
 .map {
     position: relative;
+    overflow:hidden;
 }
+
+
+
 /* FOOTER */
 footer {
     height: 10vh;
@@ -641,6 +704,7 @@ footer {
 
 footer .row a {
     font-size: 1em;
+    color:white;
 }
 
 .fa-twitter:hover {

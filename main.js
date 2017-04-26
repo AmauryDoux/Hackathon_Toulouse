@@ -1,3 +1,8 @@
+$(document).ready(function () {
+
+
+
+
 //this is where we apply opacity to the arrow
 $(window).scroll( function(){
 
@@ -33,3 +38,47 @@ $('a[href*="#"]:not([href="#"])').click(function() {
     }
   }
 });
+
+
+
+
+    $("#menu").click(function (e) {
+        e.preventDefault();
+        $this = $(this)
+
+        // si le menu est ouvert 
+        if ( $this.hasClass("is-opened"))
+        {
+            //Animation Menu Fermeture
+            $("#openMenu").addClass("is-closed").removeClass("is-opened");
+            
+            //Animation Logo Menu
+            $this.addClass("is-closed").removeClass("is-opened");
+            
+            console.log("nuit");
+            
+            
+            //si il est fermé
+        } else {
+            
+            //Animation Menu Ouvertures
+            $("#openMenu").removeClass("is-closed").addClass("is-opened");
+            
+            //animation Logo Menu
+            $this.removeClass("is-closed").addClass("is-opened");
+            
+            console.log("jour");
+        }
+
+    }) 
+    
+    $(".link").click(function (e) {
+        e.preventDefault();
+    // liens cliquable et fermable 
+        $("#openMenu").addClass("is-closed");
+         $("#menu").addClass("is-closed").removeClass("is-opened");
+        
+    })
+    
+});
+
