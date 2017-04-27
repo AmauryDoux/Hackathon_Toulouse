@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
 
 
 
@@ -40,7 +40,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
 });
 
 
-
+$(document).ready(function () {
 
     $("#menu").click(function (e) {
         e.preventDefault();
@@ -79,6 +79,8 @@ $('a[href*="#"]:not([href="#"])').click(function() {
          $("#menu").addClass("is-closed").removeClass("is-opened");
         
     })
+    
+    
     
 });
 

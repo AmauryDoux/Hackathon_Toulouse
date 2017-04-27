@@ -684,7 +684,11 @@ END COUNTDOWN CSS *******************
     font-weight: bold;
     font-size: 16px;
 }
-
+/* Twitter*/
+#twitter{
+    width:333px;
+    height:100px;
+}
 
 /* MAPS */
 
@@ -697,20 +701,29 @@ END COUNTDOWN CSS *******************
 
 /* FOOTER */
 footer {
-    height: 10vh;
+    height: 20vh;
     background: #a9378e;
-    padding-top: 2em !important;
-}
-
-footer .row a {
-    font-size: 1em;
+    padding-top: 1em !important;
     color:white;
 }
-
-.fa-twitter:hover {
-  color: #1DA1F2;
+#contact a{
+    color:white;
+   
+}
+#social{
+    display:block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#footer{
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    list-style: none;
+    line-height: 2;
 }
 
-.fa-facebook:hover {
-  color: #3B5998;
+#contact:hover,#social:hover{
+    transform: scale(1.1);
+    animation:1s;
 }
