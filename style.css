@@ -772,9 +772,11 @@ h2 {
     padding-right: 0;
 }
 footer {
-    height: 24vh;
-    display: flex;
+    height: 25vh;
 }
 footer p {
     text-align: center;
+    margin-left: 0;
+    padding-right: 0;
+}
 }
