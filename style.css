@@ -684,7 +684,7 @@ END COUNTDOWN CSS *******************
 /* Twitter*/
 #twitter {
     height: 65vh;
-    overflow: scroll;
+    overflow-y: scroll;
     border-radius: 0;
 }
 
@@ -724,3 +724,58 @@ footer p, footer a {
 .fa-twitter:hover {
   color:#1A91DB;
 }
+
+@media only screen and (max-device-width: 480px) {
+h1 {
+    margin-top: 2em;
+    font-size: 4em;
+}
+h2 {
+    font-size: 2em;
+}
+.text-right {
+    text-align: center;
+}
+.text-left {
+    text-align: center;
+}
+#press {
+    height: 80vh;
+}
+.logos {
+    height: 270px;
+    padding-top: 5em;
+}
+.rightFig {
+    height: 55vh;
+    margin-top: 40px;
+    padding: 0;
+}
+.leftFig{
+    height: 55vh;
+}
+.rightArt {
+    height: 650px;
+}
+.leftArt {
+    height: 550px;
+}
+.bottomFig {
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 19em;
+}
+#orgas p {
+    margin-top: 2em;
+}
+#twitter {
+    padding-right: 0;
+}
+footer {
+    height: 20vh;
+    display: flex;
+}
+footer p {
+    text-align: center;
+}
+footer p a {
