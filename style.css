@@ -684,7 +684,7 @@ END COUNTDOWN CSS *******************
 /* Twitter*/
 #twitter {
     height: 65vh;
-    overflow: scroll;
+    overflow-y: scroll;
     border-radius: 0;
 }
 
