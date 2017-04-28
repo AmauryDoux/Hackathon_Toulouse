@@ -79,7 +79,7 @@ Burger CSS *******************
 }
 
 
-/* Barre du Milieu*/
+/* Barre du Milieu */
 
 #span {
     width: 22px;
@@ -726,6 +726,9 @@ footer p, footer a {
 }
 
 @media only screen and (max-device-width: 480px) {
+  .link:hover{
+      transform:scale(1);
+  }
 h1 {
     margin-top: 2em;
     font-size: 4em;
