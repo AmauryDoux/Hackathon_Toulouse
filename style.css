@@ -761,7 +761,7 @@ h2 {
     height: 550px;
 }
 .bottomFig {
-    width: 200px;
+    width: 170px;
     margin-left: 20px;
     margin-top: 19em;
 }
@@ -772,10 +772,9 @@ h2 {
     padding-right: 0;
 }
 footer {
-    height: 20vh;
+    height: 24vh;
     display: flex;
 }
 footer p {
     text-align: center;
 }
-footer p a {
