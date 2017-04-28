@@ -19,7 +19,6 @@ h2 {
     margin-top: 0;
     padding-top: .8em;
     font-size: 3.5em
-
 }
 
 #header {
@@ -54,13 +53,10 @@ h1 {
 }
 
 
-
-
-
-
 /*
 Burger CSS *******************
 */
+
 
 /* Hamburger and Cross clickable */
 
@@ -75,7 +71,6 @@ Burger CSS *******************
     z-index: 3;
     cursor: pointer;
     position: fixed;
-
 }
 
 
@@ -159,6 +154,7 @@ Burger CSS *******************
     transform: rotate(180deg);
 }
 
+
 /* Animation SVG au clik */
 
 #menu.is-opened svg {
@@ -197,7 +193,7 @@ Burger CSS *******************
 /* Element à ouvrir et à fermer*/
 
 #openMenu {
-    position:fixed;
+    position: fixed;
     width: 0%;
     height: 100%;
     margin: 0;
@@ -208,38 +204,35 @@ Burger CSS *******************
     z-index: 2;
 }
 
-#openMenu.is-opened{
+#openMenu.is-opened {
     animation: slideUp 1s both;
 }
-#openMenu.is-closed, .link.is-closed{
+
+#openMenu.is-closed, .link.is-closed {
     animation: slideDown 1s both;
 }
 
-@keyframes slideUp{
-    0%{
-        width:0%;
-        height:100%;
+@keyframes slideUp {
+    0% {
+        width: 0%;
+        height: 100%;
     }
-    100%{
-        width:100%;
-        height:100%;
+    100% {
+        width: 100%;
+        height: 100%;
     }
-
 }
 
-@keyframes slideDown{
-    0%{
-        width:100%;
-        height:100%;
+@keyframes slideDown {
+    0% {
+        width: 100%;
+        height: 100%;
     }
-    100%{
-        width:0%;
-        height:100%;
+    100% {
+        width: 0%;
+        height: 100%;
     }
-
-
 }
-
 
 
 /* texte à afficher */
@@ -261,10 +254,10 @@ Burger CSS *******************
     text-decoration: none !important;
 }
 
-.link:hover{
+.link:hover {
     color: white;
     display: block;
-    transform:scale(1.7);
+    transform: scale(1.7);
     transition: all .1s;
     font-weight: bold;
 }
@@ -279,12 +272,10 @@ Burger CSS *******************
 #textMenu {
     position: relative;
     margin: 110px auto;
-    font-size:250%;
+    font-size: 250%;
     padding: 10px;
     line-height: 3;
-
 }
-
 
 
 /*
@@ -375,11 +366,11 @@ END COUNTDOWN CSS *******************
 /* Arrow */
 
 .sb-arrow-up-down {
-  bottom: 3em !important;
+    bottom: 3em !important;
 }
 
 .arrow-wrap {
-    position:absolute;
+    position: absolute;
     z-index: 1;
     left: 50%;
     top: 70%;
@@ -661,10 +652,10 @@ END COUNTDOWN CSS *******************
     text-align: center;
     height: 65vh;
     background: #ff0099;
-
 }
+
 #press h2 {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 .leftArt p {
@@ -672,7 +663,7 @@ END COUNTDOWN CSS *******************
 }
 
 #press .text-left {
-  margin-bottom: 4em;
+    margin-bottom: 4em;
 }
 
 .upcase {
@@ -681,7 +672,10 @@ END COUNTDOWN CSS *******************
     font-weight: bold;
     font-size: 16px;
 }
+
+
 /* Twitter*/
+
 #twitter {
     height: 65vh;
     overflow-y: scroll;
@@ -691,16 +685,19 @@ END COUNTDOWN CSS *******************
 #twitter a {
     text-align: center;
 }
+
 .timeline-Widget {
-  border-radius: 0!important;
+    border-radius: 0!important;
 }
+
 
 /* MAPS */
 
 .map {
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
 }
+
 #map {
     padding: 0;
     margin: 0;
@@ -708,6 +705,7 @@ END COUNTDOWN CSS *******************
 
 
 /* FOOTER */
+
 footer {
     height: 10vh;
     background: #a9378e;
@@ -715,71 +713,76 @@ footer {
 }
 
 footer p, footer a {
-  color: white;
-  margin-left: 1em;
+    color: white;
+    margin-left: 1em;
 }
+
 .fa-facebook:hover {
-  color:#3B5998;
+    color: #3B5998;
 }
+
 .fa-twitter:hover {
-  color:#1A91DB;
+    color: #1A91DB;
 }
 
 @media only screen and (max-device-width: 480px) {
-  .link:hover{
-      transform:scale(1);
-  }
-h1 {
-    margin-top: 2em;
-    font-size: 4em;
-}
-h2 {
-    font-size: 2em;
-}
-.text-right {
-    text-align: center;
-}
-.text-left {
-    text-align: center;
-}
-#press {
-    height: 80vh;
-}
-.logos {
-    height: 270px;
-    padding-top: 5em;
-}
-.rightFig {
-    height: 55vh;
-    margin-top: 40px;
-    padding: 0;
-}
-.leftFig{
-    height: 55vh;
-}
-.rightArt {
-    height: 650px;
-}
-.leftArt {
-    height: 550px;
-}
-.bottomFig {
-    width: 170px;
-    margin-left: 20px;
-    margin-top: 19em;
-}
-#orgas p {
-    margin-top: 2em;
-}
-#twitter {
-    padding-right: 0;
-}
-footer {
-    height: 25vh;
-}
-footer p {
-    text-align: center;
-    margin-left: 0;
-    padding-right: 0;
-}
+    #textMenu {
+        margin-top: 50px;
+    }
+    .link:hover {
+        transform: scale(1);
+    }
+    h1 {
+        margin-top: 2em;
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .text-right {
+        text-align: center;
+    }
+    .text-left {
+        text-align: center;
+    }
+    #press {
+        height: 80vh;
+    }
+    .logos {
+        height: 270px;
+        padding-top: 5em;
+    }
+    .rightFig {
+        height: 55vh;
+        margin-top: 40px;
+        padding: 0;
+    }
+    .leftFig {
+        height: 55vh;
+    }
+    .rightArt {
+        height: 650px;
+    }
+    .leftArt {
+        height: 550px;
+    }
+    .bottomFig {
+        width: 170px;
+        margin-left: 20px;
+        margin-top: 19em;
+    }
+    #orgas p {
+        margin-top: 2em;
+    }
+    #twitter {
+        padding-right: 0;
+    }
+    footer {
+        height: 25vh;
+    }
+    footer p {
+        text-align: center;
+        margin-left: 0;
+        padding-right: 0;
+    }
 }
